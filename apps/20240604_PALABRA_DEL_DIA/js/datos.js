@@ -1,0 +1,36 @@
+const palabras = [
+    'ABABA',
+    'ACODE',
+    'AGUJA',
+    'BALIZA',
+    'BARON',
+    'BESTIA',
+    'CADUCA',
+    'CAPOTO',
+    'CELADA',
+    'DIGITA',
+    'DORADA',
+    'DUCADO',
+    'ENFADO',
+    'ENSEÑA',
+    'ESPEJO',
+    'FICHAR',
+    'FROTAR',
+    'FUTURO',
+    'GOLPEO',
+    'GRIFOS',
+    'GUSTAR',
+    'HELADO',
+    'HIPOSO',
+    'HORNAR',
+    'IGNORE',
+    'IONICA',
+    'IRONIA',
+    'JAZMIN',
+    'JUEVES',
+    'LADRON',
+    'LUCHAR'
+]
+
+/*console.table(palabras);
+console.log("palabras", palabras);*/

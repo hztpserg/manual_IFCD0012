@@ -1,0 +1,185 @@
+@keyframes Rotar {
+    from {}
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@Keyframes Cartel {
+    25% {
+        transform: rotate(15deg);
+    }
+
+    45% {
+        transform: rotate(-10deg);
+    }
+
+    65% {
+        transform: rotate(15deg);
+    }
+
+    85% {
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes Descolgar {
+
+    20%,
+    60% {
+        transform: rotate(80deg);
+    }
+
+    40%,
+    80% {
+        transform: rotate(60deg);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+}
+
+@keyframes Vaiven {
+    15% {
+        transform: rotate(-10deg) translateX(-25%);
+        /* deg son grados */
+
+    }
+
+    30% {
+        transform: rotate(5deg) translateX(20%);
+        /* deg son grados */
+
+    }
+
+    45% {
+        transform: rotate(-3deg) translateX(-10%);
+        /*en porcentaje tendra en cuenta el tamaña del elemento*/
+    }
+
+    60% {
+        transform: rotate(2deg) translateX(5%);
+        /*en porcentaje tendra en cuenta el tamaña del elemento*/
+    }
+
+    70% {
+        transform: rotate(-1deg) translateX(-3%);
+        /*en porcentaje tendra en cuenta el tamaña del elemento*/
+    }
+}
+
+@Keyframes RotationIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) rotate(-260deg);
+    }
+}
+
+@Keyframes RotationOut {
+    0% {
+        opacity: 0;
+        transform: translateX(100%) rotate(-260deg);
+
+    }
+}
+
+@Keyframes Rebote {
+    20% {
+        transform: translateY(0px)
+    }
+
+    30% {
+        transform: translateY(-15px)
+    }
+}
+
+@keyframes ReboteInplus {
+
+    0% {
+
+        /*opacity: 0;*/
+        transform: translateX(-2000px);
+    }
+
+    50% {
+
+        /*opacity: 1;*/
+        transform: translateX(500px);
+    }
+
+    70% {
+
+        /*opacity: 1;*/
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes Giro3d {
+    40% {
+        transform: perspective(100px) / * para crear perspectiva */ translateZ(120px) rotateY(170deg);
+    }
+
+    50% {
+        transform:
+            perspective(100px) translateZ(120px) rotateY(190deg);
+    }
+
+    80% {
+        transform:
+            perspective(100px) translateZ(0px) rotateY(360deg);
+    }
+
+    100% {
+        transform:
+            perspective(100px) rotateY(360deg);
+
+    }
+
+}
+
+@keyframes Giro3d2 {
+    40% {
+        transform:
+            perspective(100px) rotateY(170deg) translateZ(120px);
+
+    }
+
+    50% {
+        transform: perspective(100px) rotateY(190deg) translateZ(120px);
+
+    }
+
+    80% {
+        transform: perspective(100px) rotateY(360deg) translateZ(0px);
+
+    }
+
+    100% {
+        transform: perspective(100px) rotateY(360deg);
+
+    }
+
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes FadeOut {
+    100% {
+        opacity: 0;
+    }
+}

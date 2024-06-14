@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARROUSEL</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        body {
+            background-color: #bbaeae;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .divTitulo,
+        .divImagen,
+        .divBotones {
+            text-align: center;
+            font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .h1Titulo {
+            color: rgb(83, 83, 83);
+        }
+        .divImagen {
+            margin-bottom: 20px;
+            width: 600px;
+            height: 400px;
+            overflow: hidden;
+            /*border: 1px solid #ccc;*/
+        }
+        .divImagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .divBotones {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            max-width: 600px;
+        }
+        #retrocederBoton,
+        #avanzarBoton {
+            padding: 10px, 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #imgRuta {
+            flex-grow: 1;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="divTitulo">
+        <h1 class="h1Titulo">CARUSEL DE IMAGINES</h1>
+    </div>
+    <div class="divImagen">
+        <img id="imagen" src="./img/Ben Affleck.jpg" alt="Ben Affleck">
+    </div>
+    <div class="divBotones">
+        <button id="retrocederBoton" onclick="retroceder()">Retroceder</button>
+        <span id="nombreImagen">./img/Ben Affleck.jpg</span>
+        <button id="avanzarBoton" onclick="avanza()">Avanzar</button>
+    </div>
+    <script src="./js/claseImagen.js"></script>
+    <div>
+        <h2 id="idDescripcion" class="divDescripcion">Descripcion</h2>
+    </div>
+    <script>
+        const RUTA = "./img/";
+        const IMAGINES = [
+            "Ben Affleck.jpg",
+            "Anna Kendrick.jpg",
+            "Jon Berntha.jpg",
+            "J. K. Simmons.jpg",
+            "John Lithgow.jpg",
+            "Jean Smart.jpg",
+            "Cynthia Addai-Robinson.jpg"
+        ];
+        let POSICION = 0;
+
+        function avanza() {
+            POSICION++;
+            if (POSICION >= IMAGINES.length) {
+                POSICION = 0;
+            }
+            mostrarImg();
+        };
+
+        function retroceder() {
+            POSICION--;
+            if (POSICION < 0) {
+                POSICION = IMAGINES.length - 1;
+            }
+            mostrarImg();
+        };
+
+        function mostrarImg() {
+            let imagen = RUTA + IMAGINES[POSICION];
+            let fichero = imagen.substring(imagen.lastIndexOf("/") + 1, imagen.lastIndexOf("."))
+            document.getElementById("imagen").src = imagen;
+            document.getElementById("imagen").alt = fichero;
+            document.getElementById("nombreImagen").innerHTML = imagen;
+        };
+    </script>
+</body>
+</html>
