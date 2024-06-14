@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="prg"></div>
+    <button onclick="mostrarPreguntas()">MOSTRAR</button>
+    <script src="./js/clase_pregunta.js"></script>
+    <script src="./js/preguntas2.js"></script>
+
+    <script>
+        function mostrarPreguntas() {
+            let pregunta = Number(prompt("Que pregunta quieres mostrar?"));
+            if(pregunta < 0 || pregunta >= preguntas.length) {
+                alert("No puedo mostrar la pregunta con numero " + pregunta);
+            } else {
+                document.getElementById("prg").innerHTML = preguntas[pregunta];
+            }
+        }
+    </script>
+</body>
+</html>
