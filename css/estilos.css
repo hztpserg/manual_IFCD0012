@@ -50,6 +50,10 @@ details summary::before {
   color: #007BFF;
 }
 
+summary h2 {
+  display: inline-block;
+}
+
 details summary:hover {
   color: #0056b3;
 }
